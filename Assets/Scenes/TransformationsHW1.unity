@@ -240,8 +240,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6aae169b6418d6e499b9d682e8585509, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 4
-  moveDistance: 4
+  _speed: 2
+  _moveDistance: 3
 --- !u!1 &898154155
 GameObject:
   m_ObjectHideFlags: 0
@@ -517,7 +517,9 @@ GameObject:
   - component: {fileID: 966837186}
   - component: {fileID: 966837185}
   - component: {fileID: 966837184}
-  - component: {fileID: 966837183}
+  - component: {fileID: 966837190}
+  - component: {fileID: 966837189}
+  - component: {fileID: 966837188}
   m_Layer: 0
   m_Name: Cube (1)
   m_TagString: Untagged
@@ -525,24 +527,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &966837183
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 966837182}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 66152f61ba3654140bb12866fc829d21, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 2
-  moveDistance: 3
-  _scaleSpeed: 0.7
-  _maxScale: 1.5
-  _minScale: 0.5
-  _rotationSpeed: 1
 --- !u!65 &966837184
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -632,6 +616,48 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &966837188
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 966837182}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98b56af7313adc849828320ae399a228, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _rotationSpeed: 1
+--- !u!114 &966837189
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 966837182}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38ae66f7bee3a054fa242e871f45d993, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _scaleSpeed: 0.7
+  _maxScale: 1.5
+  _minScale: 0.5
+--- !u!114 &966837190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 966837182}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6aae169b6418d6e499b9d682e8585509, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speed: 2
+  _moveDistance: 3
 --- !u!1 &1982116390
 GameObject:
   m_ObjectHideFlags: 0

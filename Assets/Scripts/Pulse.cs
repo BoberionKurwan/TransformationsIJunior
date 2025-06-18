@@ -2,6 +2,9 @@ using UnityEngine;
 
 public class Pulse : MonoBehaviour
 {
+    private const float MaxProgress = 1f;
+    private const float MinProgress = 0f;
+
     [SerializeField] private float _scaleSpeed = 0.7f;
     [SerializeField] private float _maxScale = 1.5f;
     [SerializeField] private float _minScale = 0.5f;
@@ -19,14 +22,14 @@ public class Pulse : MonoBehaviour
     {
         _currentProgress += (_isGrowing ? 1 : -1) * _scaleSpeed * Time.deltaTime;
 
-        if (_currentProgress >= 1f)
+        if (_currentProgress >= MaxProgress)
         {
-            _currentProgress = 1f;
+            _currentProgress = MaxProgress;
             _isGrowing = false;
         }
-        else if (_currentProgress <= 0f)
+        else if (_currentProgress <= MinProgress)
         {
-            _currentProgress = 0f;
+            _currentProgress = MinProgress;
             _isGrowing = true;
         }
 

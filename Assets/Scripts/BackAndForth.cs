@@ -2,33 +2,33 @@ using UnityEngine;
 
 public class SimpleBackAndForth : MonoBehaviour
 {
-    [SerializeField] private float speed = 2f;
-    [SerializeField] private float moveDistance = 3f;
+    [SerializeField] private float _speed = 2f;
+    [SerializeField] private float _moveDistance = 3f;
 
-    private Vector3 startPosition;
-    private bool movingForward = true;
-    private float currentOffset;
+    private Vector3 _startPosition;
+    private bool _movingForward = true;
+    private float _currentOffset;
 
-    void Start()
+    private void Start()
     {
-        startPosition = transform.position;
+        _startPosition = transform.position;
     }
 
-    void Update()
+    private void Update()
     {
-        currentOffset += (movingForward ? 1 : -1 ) * speed * Time.deltaTime;
+        _currentOffset += (_movingForward ? 1 : -1 ) * _speed * Time.deltaTime;
 
-        if (currentOffset >= moveDistance)
+        if (_currentOffset >= _moveDistance)
         {
-            currentOffset = moveDistance;
-            movingForward = false;
+            _currentOffset = _moveDistance;
+            _movingForward = false;
         }
-        else if (currentOffset <= 0f)
+        else if (_currentOffset <= 0f)
         {
-            currentOffset = 0f;
-            movingForward = true;
+            _currentOffset = 0f;
+            _movingForward = true;
         }
                 
-        transform.position = startPosition + transform.forward * currentOffset;
+        transform.position = _startPosition + transform.forward * _currentOffset;
     }
 }
